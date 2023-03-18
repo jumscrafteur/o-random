@@ -1,0 +1,28 @@
+{
+  "name": "o-random",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumscrafteur/o-random.git"
+  },
+  "author": "Hugo Sansané",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jumscrafteur/o-random/issues"
+  },
+  "homepage": "https://github.com/jumscrafteur/o-random#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
