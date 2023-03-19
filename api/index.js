@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
@@ -212,8 +213,17 @@ function getNRandom(n, array) {
   return out;
 }
 
+app.use(cors());
+
 app.get('/', (req, res) => {
-  res.send('Welcome');
+  res.json({
+    size: 'any size in M, L, XL',
+    suppQty: 'any number',
+    gratFromage: '0 or 1',
+    gratGarniture: '0 or 1',
+    viandeBlackList: 'List of all enwanted viandes separated by a coma',
+    sauceBlackList: 'List of all enwanted sauces separated by a coma',
+  });
 });
 
 app.get('/viandes', (req, res) => {
@@ -274,8 +284,8 @@ app.get('/random', (req, res) => {
     viandes: getNRandom(viandesQty, viandes),
     sauces: getNRandom(2, sauces),
     supp: getNRandom(suppQty, SUPP),
-    gratFromage: gratFromage === '1' ? getNRandom(1, GRAT_FROMAGE) : undefined,
-    gratGarniture: gratFromage === '1' && gratGarniture === '1' ? getNRandom(1, GRAT_GARNITURE) : undefined,
+    gratFromage: gratFromage === '1' ? getNRandom(1, GRAT_FROMAGE)[0] : undefined,
+    gratGarniture: gratFromage === '1' && gratGarniture === '1' ? getNRandom(1, GRAT_GARNITURE)[0] : undefined,
   };
 
   return res.json(commande);
