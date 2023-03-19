@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O-random</title>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="/assets/images/logo_text.svg" alt="" height="52px" class="logo" />
+    </div>
+
+    <main>
+        <h1>Fait ta o'recette</h1>
+        <h2>Tailles</h2>
+
+        <div class="sizeBar">
+
+            <div class="sizeItems">
+
+                <div class="sizeItem">
+                    <input name="size" type="radio" value="M" id="M" checked />
+                    <label for="M">M</label>
+                </div>
+
+                <div class="sizeItem">
+
+                    <input name="size" type="radio" value="L" id="L" />
+                    <label for="L">L</label>
+                </div>
+
+                <div class="sizeItem">
+                    <input name="size" type="radio" value="XL" id="XL" />
+                    <label for="XL">XL</label>
+                </div>
+
+            </div>
+        </div>
+        <hr class="separator">
+        <h2>Options</h2>
+
+
+        <div class="optBar">
+
+            <div class="optItem">
+                <label for="supp_count">Suppléments</label>
+                <input id="supp_count" type="number" min="0" max="14" value="0" />
+            </div>
+
+            <div class="optItem">
+                <input id="dPoulet" type="checkbox" />
+                <label for="dPoulet">Double poulet</label>
+            </div>
+
+            <div class="optItem">
+                <input id="tenders" type="checkbox" />
+                <label for="tenders">Tenders</label>
+            </div>
+
+            <div class="optItem">
+                <input id="falafel" type="checkbox" />
+                <label for="falafel">Falafels</label>
+            </div>
+        </div>
+
+        <hr class="separator">
+
+        <h2>Gratinage</h2>
+
+
+        <div class="optBar">
+
+            <div class="optItem">
+                <input id="grat_fromage" type="checkbox" />
+                <label for="grat_fromage">Fromage</label>
+            </div>
+
+            <div class="optItem">
+                <input id="grat_garniture" type="checkbox" />
+                <label for="grat_garniture">Garniture</label>
+            </div>
+        </div>
+
+        <hr class="separator">
+
+
+        <button id="generate_btn">GENERATE</button>
+
+        <div id="recipeContainer">
+            <h2>Viandes</h2>
+
+            <div class="contentBar" id="viandeContentBar"></div>
+
+            <h2>Sauces</h2>
+
+            <div class="contentBar" id="sauceContentBar"></div>
+
+            <h2>Suppléments</h2>
+
+            <div class="contentBar" id="suppContentBar">
+
+            </div>
+
+            <h2>Gratinage</h2>
+
+            <div class="contentBar" id="gratContentBar">
+
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer>Made with ❤️ by Jums & Johnny</footer>
+
+</body>
+
+<script src="index.js"></script>
+
+</html>
