@@ -1,0 +1,22 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "update_src": "rm -rf ./src ./public && cp -R ../Preprocessed/src ./src && cp -R ../Preprocessed/public ./public"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.2.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "precss": "^4.0.0"
+  }
+}
