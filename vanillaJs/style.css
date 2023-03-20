@@ -37,8 +37,6 @@ main {
 }
 
 h2 {
-    margin: 16px 0;
-
     font-size: 22px;
     color: var(--oorange);
     font-weight: light;
@@ -84,7 +82,7 @@ main {
     display: flex;
     flex-wrap: nowrap;
 
-    padding: 10px 0;
+    /* padding: 10px 0; */
 
 }
 
@@ -148,19 +146,16 @@ main {
 
 .sizeBar {
     color: var(--oorange);
-    margin: 21px 0;
-
 }
 
 
 .sizeBar .sizeItems {
-    margin-top: 15.5px;
     display: flex;
+    gap: 10px
 }
 
 
 .sizeBar .sizeItems .sizeItem {
-    margin: 0 10px 0 0;
     height: 29px;
     width: 29px;
 
@@ -215,6 +210,8 @@ button:disabled {
     overflow-x: auto;
     overflow-y: none;
 
+    flex-wrap: wrap;
+
     padding: 0 0 10px 0;
 
     scrollbar-color: var(--oorange) var(--oorange_lower);
@@ -234,14 +231,6 @@ button:disabled {
 .contentBar::-webkit-scrollbar-thumb {
     background: var(--oorange);
     border-radius: 999px;
-}
-
-h2 {
-    margin: 16px 0;
-
-    font-size: 22px;
-    color: var(--oorange);
-    font-weight: light;
 }
 
 .contentItem {
@@ -309,4 +298,20 @@ footer {
 
     background-color: var(--oorange);
     /* font-family: $mainFont; */
+}
+
+
+.params {
+    padding: 1rem;
+    background-color: rgba(235, 96, 63, .075);
+    border-radius: 1rem;
+    border: 2px dashed var(--oorange);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#recipeContainer {
+    display: none;
 }

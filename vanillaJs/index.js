@@ -6,6 +6,7 @@ const FALAFEL_CHECKBOX = document.querySelector("#falafel")
 const GRAT_FROMAGE_CHECKBOX = document.querySelector("#grat_fromage")
 const GRAT_GARNITURE_CHECKBOX = document.querySelector("#grat_garniture")
 
+const RECIPE_CONRAINER = document.querySelector("#recipeContainer")
 const VIANDE_CONTENT_BAR = document.querySelector("#viandeContentBar")
 const SAUCE_CONTENT_BAR = document.querySelector("#sauceContentBar")
 const SUPP_CONTENT_BAR = document.querySelector("#suppContentBar")
@@ -101,8 +102,10 @@ async function cook() {
 
 GENERATE_BTN.addEventListener('click', async () => {
     GENERATE_BTN.disabled = true;
+
     await cook()
     GENERATE_BTN.disabled = false;
+    RECIPE_CONRAINER.style.display = 'Block';
 
 
 })

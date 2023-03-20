@@ -18,79 +18,88 @@
 
     <main>
         <h1>Fait ta o'recette</h1>
-        <h2>Tailles</h2>
 
-        <div class="sizeBar">
+        <div class="params">
 
-            <div class="sizeItems">
+            <div>
+                <h2>Tailles</h2>
 
-                <div class="sizeItem">
-                    <input name="size" type="radio" value="M" id="M" checked />
-                    <label for="M">M</label>
+                <div class="sizeBar">
+
+                    <div class="sizeItems">
+
+                        <div class="sizeItem">
+                            <input name="size" type="radio" value="M" id="M" checked />
+                            <label for="M">M</label>
+                        </div>
+
+                        <div class="sizeItem">
+
+                            <input name="size" type="radio" value="L" id="L" />
+                            <label for="L">L</label>
+                        </div>
+
+                        <div class="sizeItem">
+                            <input name="size" type="radio" value="XL" id="XL" />
+                            <label for="XL">XL</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <h2>Options</h2>
+
+
+                <div class="optBar">
+
+                    <div class="optItem">
+                        <label for="supp_count">Suppléments</label>
+                        <input id="supp_count" type="number" min="0" max="14" value="0" />
+                    </div>
+
+                    <div class="optItem">
+                        <input id="dPoulet" type="checkbox" />
+                        <label for="dPoulet">Double poulet</label>
+                    </div>
+
+                    <div class="optItem">
+                        <input id="tenders" type="checkbox" />
+                        <label for="tenders">Tenders</label>
+                    </div>
+
+                    <div class="optItem">
+                        <input id="falafel" type="checkbox" />
+                        <label for="falafel">Falafels</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <h2>Gratinage</h2>
+
+                <div class="optBar">
+
+                    <div class="optItem">
+                        <input id="grat_fromage" type="checkbox" />
+                        <label for="grat_fromage">Fromage</label>
+                    </div>
+
+                    <div class="optItem">
+                        <input id="grat_garniture" type="checkbox" />
+                        <label for="grat_garniture">Garniture</label>
+                    </div>
                 </div>
 
-                <div class="sizeItem">
-
-                    <input name="size" type="radio" value="L" id="L" />
-                    <label for="L">L</label>
-                </div>
-
-                <div class="sizeItem">
-                    <input name="size" type="radio" value="XL" id="XL" />
-                    <label for="XL">XL</label>
-                </div>
-
-            </div>
-        </div>
-        <hr class="separator">
-        <h2>Options</h2>
-
-
-        <div class="optBar">
-
-            <div class="optItem">
-                <label for="supp_count">Suppléments</label>
-                <input id="supp_count" type="number" min="0" max="14" value="0" />
             </div>
 
-            <div class="optItem">
-                <input id="dPoulet" type="checkbox" />
-                <label for="dPoulet">Double poulet</label>
-            </div>
 
-            <div class="optItem">
-                <input id="tenders" type="checkbox" />
-                <label for="tenders">Tenders</label>
-            </div>
-
-            <div class="optItem">
-                <input id="falafel" type="checkbox" />
-                <label for="falafel">Falafels</label>
-            </div>
+            <button id="generate_btn">GENERATE</button>
         </div>
 
-        <hr class="separator">
-
-        <h2>Gratinage</h2>
-
-
-        <div class="optBar">
-
-            <div class="optItem">
-                <input id="grat_fromage" type="checkbox" />
-                <label for="grat_fromage">Fromage</label>
-            </div>
-
-            <div class="optItem">
-                <input id="grat_garniture" type="checkbox" />
-                <label for="grat_garniture">Garniture</label>
-            </div>
-        </div>
-
-        <hr class="separator">
-
-
-        <button id="generate_btn">GENERATE</button>
 
         <div id="recipeContainer">
             <h2>Viandes</h2>
