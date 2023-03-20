@@ -9,6 +9,7 @@ let VIANDE_CONTENT_BAR: HTMLDivElement;
 let SAUCE_CONTENT_BAR: HTMLDivElement;
 let SUPP_CONTENT_BAR: HTMLDivElement;
 let GRAT_CONTENT_BAR: HTMLDivElement;
+let RECIPE_CONTAINER: HTMLDivElement;
 
 
 export function linkUI(inputsElements: HTMLInputElement[], contentBarsElements: HTMLDivElement[]) {
@@ -23,6 +24,7 @@ export function linkUI(inputsElements: HTMLInputElement[], contentBarsElements: 
     SAUCE_CONTENT_BAR = contentBarsElements[1]
     SUPP_CONTENT_BAR = contentBarsElements[2]
     GRAT_CONTENT_BAR = contentBarsElements[3]
+    RECIPE_CONTAINER = contentBarsElements[4]
 }
 
 export function updateUI(recipe: Recipe) {
@@ -70,6 +72,8 @@ export function updateUI(recipe: Recipe) {
 
     if (recipe.gratGarniture)
         GRAT_CONTENT_BAR.appendChild(createTextItem(recipe.gratGarniture.name))
+
+    RECIPE_CONTAINER.style.display = "block"
 }
 
 export async function fetchRecipe() {

@@ -1,11 +1,11 @@
 import { updateUI, fetchRecipe } from "./UIManager";
 
 export async function setupGenerateButton(element: HTMLButtonElement) {
-    element.disabled = true;
-    await cook()
-    element.disabled = false;
-
-    element.addEventListener('click', async () => await cook())
+    element.addEventListener('click', async () => {
+        element.disabled = true
+        await cook()
+        element.disabled = false
+    })
 }
 
 
