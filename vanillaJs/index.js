@@ -14,7 +14,7 @@ const GRAT_CONTENT_BAR = document.querySelector("#gratContentBar")
 
 async function fetchRecipe() {
     const size = document.querySelector("input[name=size]:checked").value
-    let url = new URL('http://dev.local:3000/random')
+    let url = new URL(`${API_URL}/random`)
 
     let viandeBlacklist = []
 
@@ -113,3 +113,5 @@ GENERATE_BTN.addEventListener('click', async () => {
 document.addEventListener('DOMContentLoaded', async () => {
     await cook()
 })
+
+console.log(process.env.MY_VAR)
