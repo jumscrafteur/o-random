@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width" />
+	<title>O-Random</title>
+	%sveltekit.head%
+	<style>
+		/* =========== */
+		/* = GENERAL = */
+		/* =========== */
+
+		:root {
+			--oorange: #eb603f;
+			--oorange_lower: rgba(235, 96, 63, 0.14);
+			/* $primary: ;
+        $soft: rgba($primary, 0.14);
+        $white: white; */
+		}
+
+		@font-face {
+			font-family: 'Product Sans';
+			src: url('%sveltekit.assets%/fonts/product-sans/Product_Sans_Regular.ttf') format('truetype');
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+
+			font-family: 'Product Sans', sans-serif;
+		}
+
+		html,
+		body {
+			position: relative;
+			min-height: 100vh;
+		}
+
+		main {
+			padding-bottom: 2.5rem;
+		}
+
+		h2 {
+			font-size: 22px;
+			color: var(--oorange);
+			font-weight: light;
+		}
+	</style>
+</head>
+
+<body data-sveltekit-preload-data="hover">
+
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
+</html>
