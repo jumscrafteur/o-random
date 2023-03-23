@@ -111,7 +111,5 @@ GENERATE_BTN.addEventListener('click', async () => {
 })
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await cook()
+    await cook();
 })
-
-console.log(process.env.MY_VAR)

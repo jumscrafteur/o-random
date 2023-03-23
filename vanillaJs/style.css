@@ -80,15 +80,14 @@ main {
 
 .optBar {
     display: flex;
-    flex-wrap: nowrap;
-
+    flex-wrap: wrap;
+    gap: 10px;
     /* padding: 10px 0; */
 
 }
 
 .optItem {
     display: flex;
-    margin: 0 9.7px 0 0;
     border: 2px solid var(--oorange);
     border-radius: 6.2px;
 
