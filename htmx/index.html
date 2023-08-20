@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O-random</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.3"
+      integrity="sha384-lVb3Rd/Ca0AxaoZg5sACe8FJKF0tnUgR2Kd7ehUOG5GCcROv5uBIZsOqovBAcWua"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <img src="/images/logo_text.svg" alt="" height="52px" class="logo" />
+    </div>
+
+    <main>
+      <h1>Fait ta o'recette</h1>
+
+      <form
+        hx-post="http://localhost:3000/htmx/random"
+        hx-target="#recipeContainer"
+        hx-swap="innerHTML"
+        class="params"
+      >
+        <div>
+          <h2>Tailles</h2>
+          <div class="sizeBar">
+            <div class="sizeItems">
+              <div class="sizeItem">
+                <input name="size" type="radio" value="M" id="M" checked />
+                <label for="M">M</label>
+              </div>
+
+              <div class="sizeItem">
+                <input name="size" type="radio" value="L" id="L" />
+                <label for="L">L</label>
+              </div>
+
+              <div class="sizeItem">
+                <input name="size" type="radio" value="XL" id="XL" />
+                <label for="XL">XL</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Options</h2>
+
+          <div class="optBar">
+            <div class="optItem">
+              <label for="supp_count">Suppléments</label>
+              <input
+                id="supp_count"
+                type="number"
+                min="0"
+                max="14"
+                value="0"
+                name="supp_count"
+              />
+            </div>
+
+            <div class="optItem">
+              <input id="dPoulet" type="checkbox" name="dPoulet" />
+              <label for="dPoulet">Double poulet</label>
+            </div>
+
+            <div class="optItem">
+              <input id="tenders" type="checkbox" name="tenders" />
+              <label for="tenders">Tenders</label>
+            </div>
+
+            <div class="optItem">
+              <input id="falafel" type="checkbox" name="falafel" />
+              <label for="falafel">Falafels</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Gratinage</h2>
+
+          <div class="optBar">
+            <div class="optItem">
+              <input id="grat_fromage" type="checkbox" name="grat_fromage" />
+              <label for="grat_fromage">Fromage</label>
+            </div>
+
+            <div class="optItem">
+              <input
+                id="grat_garniture"
+                type="checkbox"
+                name="grat_garniture"
+              />
+              <label for="grat_garniture">Garniture</label>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn">Submit</button>
+      </form>
+
+      <div id="recipeContainer"></div>
+    </main>
+  </body>
+</html>
